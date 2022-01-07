@@ -62,3 +62,14 @@ code {
   height: 20px;
   margin-top: 12px;
 }
+
+.updateDeleteContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.updateDelete {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
