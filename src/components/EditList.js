@@ -31,13 +31,19 @@ function EditList({ handleUpdateList, handleDeleteList, myListsObj }) {
             <div>
                 <h4>{list.listName}</h4> <br />
                 {renderTasks()}
-                <button onClick={handleMoreTasks}>+</button>
-                <Link to={"/"}>
-                    <button onClick={() => handleUpdateList({listName: title, tasks: tasks, id: list.id})}>Update List</button>
-                </Link>
-                <Link to={"/"}>
-                    <button onClick={(e) => handleDeleteList(params.id)}>🗑</button>
-                </Link>
+                <button onClick={handleMoreTasks}>+ Task</button>
+                <br></br>
+                <br></br>
+                <div className="updateDeleteContainer">
+                    <div className="updateDelete">
+                        <Link to={"/"}>
+                            <button onClick={() => handleUpdateList({listName: title, tasks: tasks, id: list.id})}>Update List</button>
+                        </Link>
+                        <Link to={"/"}>
+                            <button onClick={(e) => handleDeleteList(params.id)}>Delete List 🗑</button>
+                        </Link>
+                    </div>
+                </div>
             </div>
         </div>
     )
