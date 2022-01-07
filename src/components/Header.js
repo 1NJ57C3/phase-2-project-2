@@ -1,5 +1,10 @@
+
 function Header() {
-    return(<h2>TaskLister PRO</h2>)
+    return(
+        <div className="header">
+            <h2>TaskLister PRO</h2>
+        </div>
+    )
 }
 
 export default Header

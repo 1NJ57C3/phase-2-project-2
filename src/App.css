@@ -1,5 +1,18 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.innerApp {
+  width: 1000px;
+  height: 100vh;
+  background-color: white;
+}
+
+.App-taskCard {
+  border-bottom: solid;
+  border-bottom: black;
 }
 
 .App-logo {

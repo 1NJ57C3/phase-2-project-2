@@ -1,5 +1,4 @@
 import './App.css';
-
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom"
 import Header from "./components/Header"
@@ -75,24 +74,27 @@ function App() {
       setMyListsObj(myListsObj.filter(obj => obj.id !== parseInt(id)))
     })
   }    /* :pepepls: */
+
   
   return (
     <div className="App">
-      <Header />
-      <Switch>
-        <Route path={"/newList"}>
-          <NewListForm handleCreateList={handleCreateList} />
-        </Route>
-        <Route path={"/:id/editList"}>
-          <EditList handleUpdateList={handleUpdateList} handleDeleteList={handleDeleteList} myListsObj={myListsObj} />
-        </Route>
-        <Route path={"/:id"}>
-          <ViewList myListsObj={myListsObj} />
-        </Route>
-        <Route path={"/"}>
-          <Home myListsObj={myListsObj} />
-        </Route>
-      </Switch>
+      <div className="innerApp">
+        <Header />
+        <Switch>
+          <Route path={"/newList"}>
+            <NewListForm handleCreateList={handleCreateList} />
+          </Route>
+          <Route path={"/:id/editList"}>
+            <EditList handleUpdateList={handleUpdateList} handleDeleteList={handleDeleteList} myListsObj={myListsObj} />
+          </Route>
+          <Route path={"/:id"}>
+            <ViewList myListsObj={myListsObj} />
+          </Route>
+          <Route path={"/"}>
+            <Home myListsObj={myListsObj} />
+          </Route>
+        </Switch>
+      </div>
     </div>
   );
 }
