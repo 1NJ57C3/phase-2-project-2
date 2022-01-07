@@ -10,15 +10,15 @@ export default function Home({ myListsObj }){
 
     return(
         <div>
-            <Link to={"/newList"}>
-                <button>Create New List</button>
-            </Link>
             <div>
                 <h3>My Lists:</h3>
                 <div>
                     {renderLists()}
                 </div>
             </div>
+            <Link to={"/newList"}>
+                <button>Create New List</button>
+            </Link>
         </div>
     )
 }

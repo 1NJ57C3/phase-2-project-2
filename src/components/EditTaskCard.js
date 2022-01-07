@@ -33,9 +33,9 @@ function EditTaskCard({ id, task, setEditList, list}) {
     }
     
     return(
-        <div>
+        <div className="taskCard">
             <h3>Task {id+1}</h3>
-            <input type="text" placeholder="Task name" value={taskObj.taskName} onChange={(e)=> handleNameChange(e)} />
+            <input className="textInput" type="text" placeholder="Task name" value={taskObj.taskName} onChange={(e)=> handleNameChange(e)} />
             <p onClick={handleCompletedChange}>Completed: {task.completed ? <button>✅</button> : <button>❌</button>}</p> {/* The weird render behavior seems to happen because of the state's shared/piggybacking setup */}
         </div>
     )

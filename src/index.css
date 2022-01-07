@@ -12,3 +12,53 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.innerApp {
+  width: 1000px;
+  min-height: 100vh;
+  background-color: white;
+}
+
+.homeListCard {
+  border: solid;
+  border-color: black;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.listDetails {
+  width: 200px;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+}
+
+.listHeaderDetails {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.taskCard {
+  border: solid;
+  border-color: black;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.textInput {
+  width: 400px;
+  height: 20px;
+  margin-top: 12px;
+}
