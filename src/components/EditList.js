@@ -6,13 +6,7 @@ import EditTaskCard from "./EditTaskCard"
 
 function EditList({ handleUpdateList, handleDeleteList, myListsObj }) {
     const params = useParams()
-    // console.log("EDITLIST... ",params)
     const list = myListsObj.find(listObj => listObj.id === parseInt(params.id))
-    console.log(list)
-    console.log(myListsObj)
-    // console.log("EDITLIST... ",list)
-    // console.log("EDITLIST... ",myListsObj)
-
     const [{ title, tasks }, setEditList ] = useState({title: list.listName, tasks: [...list.tasks]})
 
     function handleMoreTasks(){
@@ -26,21 +20,21 @@ function EditList({ handleUpdateList, handleDeleteList, myListsObj }) {
     return(
         <div>
             <Link to={"/"}>
-                <button>Back to Lists</button>
+                <button>◀📋</button>
             </Link>
             <div>
                 <h4>{list.listName}</h4> <br />
                 {renderTasks()}
-                <button onClick={handleMoreTasks}>+ Task</button>
+                <button onClick={handleMoreTasks}>➕</button>
                 <br></br>
                 <br></br>
                 <div className="updateDeleteContainer">
                     <div className="updateDelete">
                         <Link to={"/"}>
-                            <button onClick={() => handleUpdateList({listName: title, tasks: tasks, id: list.id})}>Update List</button>
+                            <button onClick={() => handleUpdateList({listName: title, tasks: tasks, id: list.id})}>✔</button>
                         </Link>
                         <Link to={"/"}>
-                            <button onClick={(e) => handleDeleteList(params.id)}>Delete List 🗑</button>
+                            <button onClick={(e) => handleDeleteList(params.id)}>📃🗑</button>
                         </Link>
                     </div>
                 </div>
