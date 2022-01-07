@@ -24,7 +24,7 @@ function ViewList({ myListsObj }) {
     return(
         <div>
             <Link to={"/"}>
-                <button>Back to Lists</button>
+                <button>◀ Lists</button>
             </Link>
             <h3>{list.listName}</h3>
             <div className="listHeaderDetails">

@@ -19,7 +19,7 @@ export default function NewTaskCard({ id, tasks, setNewList }){
     return(
         <div className="taskCard">
             <h3>Task {id+1}</h3>
-            <input className="textInput" type="text" placeholder="Task name" value={taskInput} onChange={handleChange} />
+            <input className="textInput" type="text" placeholder="Task..." value={taskInput} onChange={handleChange} />
         </div>
     )
 }
