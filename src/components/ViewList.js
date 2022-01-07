@@ -28,12 +28,15 @@ function ViewList({ myListsObj }) {
 
     return(
         <div>
+            <Link to={"/"}>
+                <button>Back to Lists</button>
+            </Link>
             <div>
                 <h4>{list.listName}</h4>
                 <p>{list.tasks.length} Tasks</p>
                 <p>{percentDone}% Completed</p>
                 <Link to={`/${params.id}/editList`}>
-                    <button>{"📝"}</button>
+                    <button>{"Edit 📝"}</button>
                 </Link>
             </div>
             <div>
