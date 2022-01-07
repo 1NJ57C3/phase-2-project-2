@@ -16,13 +16,13 @@ export default function NewListForm({ handleCreateList }){
     return(
         <div>
             <Link to={"/"}>
-                <button>◀📋</button>
+                <button>◀ Lists </button>
             </Link>
             <br />
             <label>List Name: </label>
-            <input type="text" name="listName" placeholder="List title..." value={title} onChange={(e)=> setNewList(state => ({...state, title: e.target.value}))} /> <br />
+            <input type="text" name="listName" placeholder="List Name..." value={title} onChange={(e)=> setNewList(state => ({...state, title: e.target.value}))} /> <br />
             {renderTasks()}
-            <button onClick={handleMoreTasks}>➕</button>
+            <button onClick={handleMoreTasks}>➕ Task</button>
             <br></br>
             <br></br>
             <Link to={"/"}>

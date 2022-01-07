@@ -17,7 +17,7 @@ export default function Home({ myListsObj }){
                 </div>
             </div>
             <Link to={"/newList"}>
-                <button>Create New List</button>
+                <button>➕ List</button>
             </Link>
         </div>
     )

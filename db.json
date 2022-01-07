@@ -87,19 +87,9 @@
           "id": 17,
           "taskName": "Push 1NJ57C3-wip Branch up to GitHub! :pepehands:",
           "completed": true
-        },
-        {
-          "taskName": "It works!!!!!!!!!",
-          "completed": false,
-          "id": 17
-        },
-        {
-          "taskName": "Doess trhis work?",
-          "completed": false,
-          "id": 18
         }
       ],
-      "id": 6
+      "id": 1
     },
     {
       "listName": "Phase 2 Project",
@@ -117,65 +107,121 @@
         {
           "taskName": "Set up routing",
           "completed": true,
-          "id": 2
+          "id": 3
         },
         {
           "taskName": "set up states",
           "completed": true,
-          "id": 3
+          "id": 4
         },
         {
           "taskName": "Link the components",
           "completed": true,
-          "id": 4
+          "id": 5
         },
         {
           "taskName": "Create major bugs",
           "completed": true,
-          "id": 5
+          "id": 6
         },
         {
           "taskName": "Troubleshoot and debug for 8 hours",
           "completed": true,
-          "id": 6
+          "id": 7
         },
         {
           "taskName": "Cry",
           "completed": true,
-          "id": 7
+          "id": 8
         },
         {
           "taskName": "More troubleshooting",
           "completed": true,
-          "id": 8
+          "id": 9
         },
         {
           "taskName": "Don't sleep",
           "completed": true,
-          "id": 9
+          "id": 10
         },
         {
           "taskName": "Cry again",
           "completed": true,
-          "id": 10
+          "id": 11
         },
         {
           "taskName": "Pivot to entirely new project with 24 hours until due date",
           "completed": true,
-          "id": 11
+          "id": 12
         },
         {
           "taskName": "Create new project",
           "completed": true,
-          "id": 12
+          "id": 13
         },
         {
           "taskName": "Present project",
           "completed": false,
-          "id": 13
+          "id": 14
         }
       ],
-      "id": 7
+      "id": 2
+    },
+    {
+      "listName": "Shitty Wok",
+      "tasks": [
+        {
+          "id": 1,
+          "taskName": "Why",
+          "completed": false
+        },
+        {
+          "id": 2,
+          "taskName": "U",
+          "completed": false
+        },
+        {
+          "id": 3,
+          "taskName": "Keep",
+          "completed": false
+        },
+        {
+          "id": 4,
+          "taskName": "Brek",
+          "completed": false
+        },
+        {
+          "id": 5,
+          "taskName": "Down",
+          "completed": false
+        },
+        {
+          "id": 6,
+          "taskName": "My",
+          "completed": false
+        },
+        {
+          "id": 7,
+          "taskName": "Shitty",
+          "completed": false
+        },
+        {
+          "id": 8,
+          "taskName": "Wall",
+          "completed": false
+        },
+        {
+          "id": 9,
+          "taskName": "Shtupid",
+          "completed": false
+        },
+        {
+          "id": 10,
+          "taskName": "Mongorrians?!",
+          "completed": false
+        }
+      ],
+      "id": 3
     }
   ]
 }
