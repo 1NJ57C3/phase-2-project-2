@@ -10,10 +10,11 @@ import EditList from "./components/EditList";
 
 function App() {
   const [myListsObj, setMyListsObj] = useState({})
+  const [reGetToggle, setReGetToggle] = useState(false)
 
   useEffect(() => {
     getMyLists()
-  },[])
+  },[reGetToggle])
 
   function getMyLists() {
     fetch("http://localhost:8000/todoLists")
@@ -60,10 +61,7 @@ function App() {
       body: JSON.stringify(listObj)
     }
     fetch(`http://localhost:8000/toDoLists/${listObj.id}`, patchObj)
-    .then(r => r.json())
-    .then(data => console.log("PATCHED --- ",data))
-    // make sure local copy changed?
-    /*  */
+    .then(setReGetToggle(!reGetToggle))
   }
 
   function handleDeleteList(id) {
@@ -73,7 +71,7 @@ function App() {
     .then(() => {
       setMyListsObj(myListsObj.filter(obj => obj.id !== parseInt(id)))
     })
-  }    /* :pepepls: */
+  }
 
   
   return (

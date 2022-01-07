@@ -16,11 +16,11 @@ function EditList({ handleUpdateList, handleDeleteList, myListsObj }) {
     const [{ title, tasks }, setEditList ] = useState({title: list.listName, tasks: [...list.tasks]})
 
     function handleMoreTasks(){
-        setEditList(state => ({...state, tasks:[...tasks, {taskName: "", completed: false}] }))
+        setEditList(state => ({...state, tasks:[...tasks, {taskName: "", completed: false, id: tasks.length}] }))
     }
 
     function renderTasks() {
-        return tasks.map((task, i) => <EditTaskCard key={i} id={i} task={task} setEditList={setEditList} list={list} />)
+        return tasks.map((task, i) => <EditTaskCard key={i} id={i} task={task} tasks={tasks} setEditList={setEditList} list={list} />)
     }
     
     return(
