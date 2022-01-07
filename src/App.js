@@ -62,8 +62,6 @@ function App() {
     fetch(`http://localhost:8000/toDoLists/${listObj.id}`, patchObj)
     .then(r => r.json())
     .then(data => console.log("PATCHED --- ",data))
-    // make sure local copy changed?
-    /*  */
   }
 
   function handleDeleteList(id) {
@@ -73,7 +71,7 @@ function App() {
     .then(() => {
       setMyListsObj(myListsObj.filter(obj => obj.id !== parseInt(id)))
     })
-  }    /* :pepepls: */
+  }
 
   
   return (

@@ -5,7 +5,6 @@ export default function NewTaskCard({ id, tasks, setNewList }){
     
     function handleChange(e){
         setTaskInput(e.target.value);
-        /* TASKS prop of destructured Parent state does not seem to work properly when properly linked into secure input loop. These inputs should probably be moved up a level up to fix. */
 
         const updatedTasks = tasks.map((task, i) => {
             if (i === id ) {
@@ -13,15 +12,14 @@ export default function NewTaskCard({ id, tasks, setNewList }){
             } else {
                 return task
             }
-        })
-        
+        })        
         setNewList(state => ({...state, tasks: updatedTasks }))
     }
 
     return(
         <div className="taskCard">
             <h3>Task {id+1}</h3>
-            <input className="textInput" type="text" placeholder="Task name" value={taskInput} onChange={(e)=> handleChange(e)} />
+            <input className="textInput" type="text" placeholder="Task name" value={taskInput} onChange={handleChange} />
         </div>
     )
 }
