@@ -33,8 +33,8 @@ function App() {
   }
 
   function handleCreateList(title, tasks) {
-    const enhancedTasks = tasks.map(task => {
-      const taskObj = {taskName: task, completed: false}
+    const enhancedTasks = tasks.map((task, i) => {
+      const taskObj = {id: i+1, taskName: task, completed: false}
       return taskObj
     })
     const listObj = {listName: title, tasks: enhancedTasks}
@@ -54,15 +54,30 @@ function App() {
     .then(data => setMyListsObj([...myListsObj, data]))
   }
 
-  function handleUpdateList() {
-    //patch
+  function handleUpdateList(id) {
+    const patchObj = {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({/* key:val */})
+    }
+
+    fetch(`http://localhost:8000/toDoLists/${id}`, patchObj)
+    .then(r => r.json())
+    .then(data => console.log("PATCHED --- ",data))
     // make sure local copy changed?
+    /*  */
   }
 
-  function handleDeleteList() {
-    //delete
-    // delete frokm local copy
-  }
+  function handleDeleteList(id) {
+    fetch(`http://localhost:8000/toDoLists/${id}`, {
+      method: "DELETE"
+    })
+    .then(() => {
+      setMyListsObj(myListsObj.filter(obj => obj.id !== parseInt(id)))
+    })
+  }    /* :pepepls: */
   
   return (
     <div className="App">
@@ -72,13 +87,13 @@ function App() {
           <NewListForm handleCreateList={handleCreateList} />
         </Route>
         <Route path={"/:id/editList"}>
-          <EditList handleUpdateList={handleUpdateList} handleDeleteList={handleUpdateList} myListsObj={myListsObj}/>
+          <EditList handleUpdateList={handleUpdateList} handleDeleteList={handleDeleteList} myListsObj={myListsObj} />
         </Route>
         <Route path={"/:id"}>
-          <ViewList myListsObj={myListsObj}/>
+          <ViewList myListsObj={myListsObj} />
         </Route>
         <Route path={"/"}>
-          <Home myListsObj={myListsObj}/>
+          <Home myListsObj={myListsObj} />
         </Route>
       </Switch>
     </div>

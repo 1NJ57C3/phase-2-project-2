@@ -4,6 +4,7 @@
       "listName": "List 1",
       "tasks": [
         {
+          "id": 1,
           "taskName": "Task 1",
           "completed": false
         }
@@ -14,6 +15,7 @@
       "listName": "List 2",
       "tasks": [
         {
+          "id:": 1,
           "taskName": "Task 1",
           "completed": false
         }
@@ -24,6 +26,7 @@
       "listName": "List 3",
       "tasks": [
         {
+          "id": 1,
           "taskName": "Task 1",
           "completed": false
         }
@@ -34,19 +37,108 @@
       "listName": "Super Test List",
       "tasks": [
         {
+          "id": 1,
           "taskName": "Finish this project",
           "completed": false
         },
         {
+          "id": 2,
           "taskName": "???Cry",
           "completed": false
         },
         {
+          "id": 3,
           "taskName": "Sleep",
           "completed": false
         }
       ],
       "id": 4
+    },
+    {
+      "listName": "1NJ57C3's Efforts",
+      "tasks": [
+        {
+          "id": 1,
+          "taskName": "Read/Skim through Code",
+          "completed": true
+        },
+        {
+          "id": 2,
+          "taskName": "Attempt to Understand Code",
+          "completed": true
+        },
+        {
+          "id": 3,
+          "taskName": "QA Test/Identify Bugs",
+          "completed": true
+        },
+        {
+          "id": 4,
+          "taskName": "Cry / Head Desk",
+          "completed": false
+        },
+        {
+          "id": 5,
+          "taskName": "Write fetch/PATCH",
+          "completed": true
+        },
+        {
+          "id": 6,
+          "taskName": "Complete fetch/PATCH",
+          "completed": false
+        },
+        {
+          "id": 7,
+          "taskName": "Write fetch/DELETE",
+          "completed": true
+        },
+        {
+          "id": 8,
+          "taskName": "Complete fetch/DELETE",
+          "completed": true
+        },
+        {
+          "id": 9,
+          "taskName": "Write New Functionality",
+          "completed": true
+        },
+        {
+          "id": 10,
+          "taskName": "Cry some more... :pepehands:",
+          "completed": false
+        },
+        {
+          "id": 11,
+          "taskName": ":pepepls:",
+          "completed": true
+        },
+        {
+          "id": 12,
+          "taskName": ":Admit defeat:",
+          "completed": true
+        },
+        {
+          "id": 13,
+          "taskName": "Manually add IDs to added todoLists[i].tasks",
+          "completed": true
+        },
+        {
+          "id": 14,
+          "taskName": "Dynamically append todoLists[i].tasks.id on creation",
+          "completed": true
+        },
+        {
+          "id": 15,
+          "taskName": "Attempt to push percentage calculator up, value into state. Encounter init fetch State Async issues.",
+          "completed": true
+        },
+        {
+          "id": 16,
+          "taskName": "Attempt to troubleshoot EditTaskCard's state problems.",
+          "completed": true
+        }
+      ],
+      "id": 6
     }
   ]
 }
