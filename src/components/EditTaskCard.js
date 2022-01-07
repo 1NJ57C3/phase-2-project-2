@@ -1,12 +1,15 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 
-function EditTaskCard({ id, task, setEditList, list}) {
-    const [ taskObj, setTaskObj ] = useState({...task})
+function EditTaskCard({ id, task, tasks, setEditList, list}) {
+    const [ taskObj, setTaskObj ] = useState(task)
 
     function handleNameChange(e) {
         setTaskObj({...taskObj, taskName: e.target.value})
         const updatedTasks = list.tasks.map((task, i) => {
+          
+    useEffect(() => {
+        const updatedTasks = tasks.map((task, i) => {
             if (i === id) {
                 return taskObj
             } else {
@@ -15,18 +18,14 @@ function EditTaskCard({ id, task, setEditList, list}) {
         })
 
         setEditList(state => ({...state, tasks:[...updatedTasks]}))
+    },[taskObj])
+    
+    function handleNameChange(e) {
+        setTaskObj({...taskObj, taskName: e.target.value})
     }
 
     function handleCompletedChange() {
         setTaskObj({...taskObj, completed: !taskObj.completed})
-        const updatedTasks = list.tasks.map((task, i) => {
-            if (i === id) {
-                return taskObj
-            } else {
-                return task
-            }
-        })
-        setEditList(state => ({...state, tasks:[...updatedTasks]}))
     }
     
     return(
