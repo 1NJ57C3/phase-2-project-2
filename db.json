@@ -1,4 +1,4 @@
-{ 
+{
   "todoLists": [
     {
       "listName": "List 1",
@@ -135,6 +135,11 @@
         {
           "id": 16,
           "taskName": "Attempt to troubleshoot EditTaskCard's state problems.",
+          "completed": true
+        },
+        {
+          "id": 17,
+          "taskName": "Push Branch up to GitHub! :pepehands:",
           "completed": true
         }
       ],
