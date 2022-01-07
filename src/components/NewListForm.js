@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import NewTaskCard from "./NewTaskCard";
+import { Link } from "react-router-dom"
 
-export default function NewListForm({ taskLists, setTaskLists }){
+export default function NewListForm({ handleCreateList }){
     const [ { title, tasks }, setNewList ] = useState({title: "", tasks: [""]})
 
     function handleMoreTasks(){
@@ -14,9 +15,12 @@ export default function NewListForm({ taskLists, setTaskLists }){
 
     return(
         <div>
-            <input type="text" placeholder="List title..." value={title} onChange={(e)=> setNewList(state => ({...state, title:e.target.value}))} /> <br />
+            <input type="text" placeholder="List title..." value={title} onChange={(e)=> setNewList(state => ({...state, title: e.target.value}))} /> <br />
             {renderTasks()}
             <button onClick={handleMoreTasks}>+</button>
+            <Link to={"/"}>
+                <button onClick={() => handleCreateList(title, tasks)}>Create List</button>
+            </Link>
         </div>
     )
 }
