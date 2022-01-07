@@ -11,6 +11,7 @@ function EditTaskCard({ id, task, tasks, setEditList, list}) {
                 return task
             }
         })
+
         setEditList(state => ({...state, tasks:[...updatedTasks]}))
     },[taskObj])
     
@@ -25,7 +26,7 @@ function EditTaskCard({ id, task, tasks, setEditList, list}) {
     return(
         <div className="taskCard">
             <h3>Task {id+1}</h3>
-            <input className="textInput" type="text" placeholder="Task name" value={taskObj.taskName} onChange={(e)=> handleNameChange(e)} />
+            <input className="textInput" type="text" placeholder="Task name" value={taskObj.taskName} onChange={handleNameChange} />
             <p onClick={handleCompletedChange}>Completed: {task.completed ? <button>✅</button> : <button>❌</button>}</p>
         </div>
     )

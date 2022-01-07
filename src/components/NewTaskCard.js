@@ -12,15 +12,14 @@ export default function NewTaskCard({ id, tasks, setNewList }){
             } else {
                 return task
             }
-        })
-        
+        })        
         setNewList(state => ({...state, tasks: updatedTasks }))
     }
 
     return(
         <div className="taskCard">
             <h3>Task {id+1}</h3>
-            <input className="textInput" type="text" placeholder="Task name" value={taskInput} onChange={(e)=> handleChange(e)} />
+            <input className="textInput" type="text" placeholder="Task name" value={taskInput} onChange={handleChange} />
         </div>
     )
 }
