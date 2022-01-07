@@ -1,13 +1,8 @@
 import { useState, useEffect } from "react"
 
-
 function EditTaskCard({ id, task, tasks, setEditList, list}) {
     const [ taskObj, setTaskObj ] = useState(task)
 
-    function handleNameChange(e) {
-        setTaskObj({...taskObj, taskName: e.target.value})
-        const updatedTasks = list.tasks.map((task, i) => {
-          
     useEffect(() => {
         const updatedTasks = tasks.map((task, i) => {
             if (i === id) {
@@ -31,8 +26,8 @@ function EditTaskCard({ id, task, tasks, setEditList, list}) {
     return(
         <div className="taskCard">
             <h3>Task {id+1}</h3>
-            <input type="text" placeholder="Task name" value={taskObj.taskName} onChange={handleNameChange} />
-            <p onClick={handleCompletedChange}>Completed: {taskObj.completed ? <button>✅</button> : <button>❌</button>}</p>
+            <input className="textInput" type="text" placeholder="Task name" value={taskObj.taskName} onChange={handleNameChange} />
+            <p onClick={handleCompletedChange}>Completed: {task.completed ? <button>✅</button> : <button>❌</button>}</p>
         </div>
     )
 }

@@ -43,5 +43,4 @@ function EditList({ handleUpdateList, handleDeleteList, myListsObj }) {
     )
 }
 
-
 export default EditList

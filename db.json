@@ -1,60 +1,6 @@
 {
   "todoLists": [
     {
-      "listName": "List 1",
-      "tasks": [
-        {
-          "id": 1,
-          "taskName": "Task 1",
-          "completed": false
-        }
-      ],
-      "id": 1
-    },
-    {
-      "listName": "List 2",
-      "tasks": [
-        {
-          "id:": 1,
-          "taskName": "Task 1",
-          "completed": false
-        }
-      ],
-      "id": 2
-    },
-    {
-      "listName": "List 3",
-      "tasks": [
-        {
-          "id": 1,
-          "taskName": "Task 1",
-          "completed": false
-        }
-      ],
-      "id": 3
-    },
-    {
-      "listName": "Super Test List",
-      "tasks": [
-        {
-          "id": 1,
-          "taskName": "Finish this project",
-          "completed": false
-        },
-        {
-          "id": 2,
-          "taskName": "???Cry",
-          "completed": false
-        },
-        {
-          "id": 3,
-          "taskName": "Sleep",
-          "completed": false
-        }
-      ],
-      "id": 4
-    },
-    {
       "listName": "1NJ57C3's Efforts",
       "tasks": [
         {
@@ -156,17 +102,77 @@
       "id": 6
     },
     {
-      "listName": "Final Test List",
+      "listName": "Phase 2 Project",
       "tasks": [
         {
           "id": 1,
-          "taskName": "Check if you can create new list",
+          "taskName": "Choose overly ambitious project",
           "completed": true
         },
         {
-          "taskName": "Check if you can update list",
+          "id": 2,
+          "taskName": "Set up API hits",
+          "completed": true
+        },
+        {
+          "taskName": "Set up routing",
+          "completed": true,
+          "id": 2
+        },
+        {
+          "taskName": "set up states",
+          "completed": true,
+          "id": 3
+        },
+        {
+          "taskName": "Link the components",
+          "completed": true,
+          "id": 4
+        },
+        {
+          "taskName": "Create major bugs",
+          "completed": true,
+          "id": 5
+        },
+        {
+          "taskName": "Troubleshoot and debug for 8 hours",
+          "completed": true,
+          "id": 6
+        },
+        {
+          "taskName": "Cry",
+          "completed": true,
+          "id": 7
+        },
+        {
+          "taskName": "More troubleshooting",
+          "completed": true,
+          "id": 8
+        },
+        {
+          "taskName": "Don't sleep",
+          "completed": true,
+          "id": 9
+        },
+        {
+          "taskName": "Cry again",
+          "completed": true,
+          "id": 10
+        },
+        {
+          "taskName": "Pivot to entirely new project with 24 hours until due date",
+          "completed": true,
+          "id": 11
+        },
+        {
+          "taskName": "Create new project",
+          "completed": true,
+          "id": 12
+        },
+        {
+          "taskName": "Present project",
           "completed": false,
-          "id": 1
+          "id": 13
         }
       ],
       "id": 7
