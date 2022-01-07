@@ -6,13 +6,7 @@ import EditTaskCard from "./EditTaskCard"
 
 function EditList({ handleUpdateList, handleDeleteList, myListsObj }) {
     const params = useParams()
-    // console.log("EDITLIST... ",params)
     const list = myListsObj.find(listObj => listObj.id === parseInt(params.id))
-    console.log(list)
-    console.log(myListsObj)
-    // console.log("EDITLIST... ",list)
-    // console.log("EDITLIST... ",myListsObj)
-
     const [{ title, tasks }, setEditList ] = useState({title: list.listName, tasks: [...list.tasks]})
 
     function handleMoreTasks(){
@@ -48,6 +42,5 @@ function EditList({ handleUpdateList, handleDeleteList, myListsObj }) {
         </div>
     )
 }
-
 
 export default EditList

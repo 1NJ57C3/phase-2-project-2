@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 export default function NewTaskCard({ id, tasks, setNewList }){
     const [ taskInput, setTaskInput ] = useState("")
     
     function handleChange(e){
         setTaskInput(e.target.value);
-        /* TASKS prop of destructured Parent state does not seem to work properly when properly linked into secure input loop. These inputs should probably be moved up a level up to fix. */
 
         const updatedTasks = tasks.map((task, i) => {
             if (i === id ) {
