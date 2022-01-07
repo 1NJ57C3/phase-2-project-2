@@ -1,3 +1,52 @@
 {
-    "tasklist": []
+  "todoLists": [
+    {
+      "listName": "List 1",
+      "tasks": [
+        {
+          "taskName": "Task 1",
+          "completed": false
+        }
+      ],
+      "id": 1
+    },
+    {
+      "listName": "List 2",
+      "tasks": [
+        {
+          "taskName": "Task 1",
+          "completed": false
+        }
+      ],
+      "id": 2
+    },
+    {
+      "listName": "List 3",
+      "tasks": [
+        {
+          "taskName": "Task 1",
+          "completed": false
+        }
+      ],
+      "id": 3
+    },
+    {
+      "listName": "Super Test List",
+      "tasks": [
+        {
+          "taskName": "Finish this project",
+          "completed": false
+        },
+        {
+          "taskName": "???Cry",
+          "completed": false
+        },
+        {
+          "taskName": "Sleep",
+          "completed": false
+        }
+      ],
+      "id": 4
+    }
+  ]
 }

@@ -13,6 +13,8 @@ export default function NewTaskCard({ id, tasks, setNewList }){
         setNewList(state => ({...state, tasks: updatedTasks }))
     }
 
+    //add controlled value to input
+
     return(
         <div>
             <h3>Task {id+1}</h3>
