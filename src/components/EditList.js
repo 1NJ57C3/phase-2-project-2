@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router"
 import { Link } from "react-router-dom"
-import NewEditTaskCard from "./NewEditTaskCard"
+import EditTaskCard from "./EditTaskCard"
 
 
 function EditList({ handleUpdateList, handleDeleteList, myListsObj }) {
     const params = useParams()
-    console.log(params)
+    // console.log("EDITLIST... ",params)
     const list = myListsObj.find(listObj => listObj.id === parseInt(params.id))
-    console.log(list)
-    console.log(myListsObj)
+    // console.log("EDITLIST... ",list)
+    // console.log("EDITLIST... ",myListsObj)
 
-    const [ { title, tasks }, setEditList ] = useState({title: list.listName, tasks: [...list.tasks]})
+    const [{ title, tasks }, setEditList ] = useState({title: list.listName, tasks: [...list.tasks]})
 
     function handleMoreTasks(){
         setEditList(state => ({...state, tasks:[...tasks, {taskName: "", completed: false}] }))
     }
 
     function renderTasks() {
-        return tasks.map((task, i) => <NewEditTaskCard key={i} id={i} task={task} setEditList={setEditList} list={list} />)
+        return tasks.map((task, i) => <EditTaskCard key={i} id={i} task={task} setEditList={setEditList} list={list} />)
     }
     
     return(
@@ -30,7 +30,7 @@ function EditList({ handleUpdateList, handleDeleteList, myListsObj }) {
                 <button onClick={() => handleUpdateList(title, tasks)}>Update List</button>
             </Link>
             <Link to={"/"}>
-                <button onClick={() => handleDeleteList(title, tasks)}>Delete List</button>
+                <button onClick={(e) => handleDeleteList(params.id)}>🗑</button>
             </Link>
         </div>
     )

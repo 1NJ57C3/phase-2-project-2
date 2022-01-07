@@ -1,11 +1,15 @@
 import { useState } from "react"
 
 
-function NewEditTaskCard({ id, task, setEditList, list}) {
-    const [taskObj, setTask] = useState(task)
+function EditTaskCard({ id, task, setEditList, list}) {
+    const [ taskObj, setTaskObj ] = useState(task)
+
+    console.log("EDITTASKCARD/id... ",id)
+    console.log("EDITTASKCARD/task... ",task)
+    console.log("EDITTASKCARD... ",list)
     
     function handleNameChange(e) {
-        setTask({...taskObj, taskName: e.target.value})
+        setTaskObj({...taskObj, taskName: e.target.value})
         const updatedTasks = list.tasks.map((task, i) => {
             if (i === id) {
                 return taskObj
@@ -17,7 +21,7 @@ function NewEditTaskCard({ id, task, setEditList, list}) {
     }
 
     function handleCompletedChange() {
-        setTask({...taskObj, completed: !taskObj.completed})
+        setTaskObj({...taskObj, completed: !taskObj.completed})
         const updatedTasks = list.tasks.map((task, i) => {
             if (i === id) {
                 return taskObj
@@ -32,9 +36,9 @@ function NewEditTaskCard({ id, task, setEditList, list}) {
         <div>
             <h3>Task {id+1}</h3>
             <input type="text" placeholder="Task name" value={taskObj.taskName} onChange={(e)=> handleNameChange(e)} />
-            <p onClick={handleCompletedChange}>Completed: {task.completed ? "✅" : "❌"}</p> fix me!!!!!!
+            <p onClick={handleCompletedChange}>Completed: {task.completed ? <button>✅</button> : <button>❌</button>}</p> {/* The weird render behavior seems to happen because of the state's shared/piggybacking setup */}
         </div>
     )
 }
 
-export default NewEditTaskCard
+export default EditTaskCard
