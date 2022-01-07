@@ -11,7 +11,7 @@ function EditList({ handleUpdateList, handleDeleteList, myListsObj }) {
     // console.log("EDITLIST... ",list)
     // console.log("EDITLIST... ",myListsObj)
 
-    const [ { title, tasks }, setEditList ] = useState({title: list.listName, tasks: [...list.tasks]})
+    const [{ title, tasks }, setEditList ] = useState({title: list.listName, tasks: [...list.tasks]})
 
     function handleMoreTasks(){
         setEditList(state => ({...state, tasks:[...tasks, {taskName: "", completed: false}] }))
