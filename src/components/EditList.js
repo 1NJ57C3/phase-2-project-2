@@ -8,6 +8,8 @@ function EditList({ handleUpdateList, handleDeleteList, myListsObj }) {
     const params = useParams()
     // console.log("EDITLIST... ",params)
     const list = myListsObj.find(listObj => listObj.id === parseInt(params.id))
+    console.log(list)
+    console.log(myListsObj)
     // console.log("EDITLIST... ",list)
     // console.log("EDITLIST... ",myListsObj)
 
@@ -23,15 +25,20 @@ function EditList({ handleUpdateList, handleDeleteList, myListsObj }) {
     
     return(
         <div>
-            <h4>{list.listName}</h4> <br />
-            {renderTasks()}
-            <button onClick={handleMoreTasks}>+</button>
             <Link to={"/"}>
-                <button onClick={() => handleUpdateList(title, tasks)}>Update List</button>
+                <button>Back to Lists</button>
             </Link>
-            <Link to={"/"}>
-                <button onClick={(e) => handleDeleteList(params.id)}>🗑</button>
-            </Link>
+            <div>
+                <h4>{list.listName}</h4> <br />
+                {renderTasks()}
+                <button onClick={handleMoreTasks}>+</button>
+                <Link to={"/"}>
+                    <button onClick={() => handleUpdateList({listName: title, tasks: tasks, id: list.id})}>Update List</button>
+                </Link>
+                <Link to={"/"}>
+                    <button onClick={(e) => handleDeleteList(params.id)}>🗑</button>
+                </Link>
+            </div>
         </div>
     )
 }
