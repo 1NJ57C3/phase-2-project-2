@@ -31,12 +31,12 @@ function ViewList({ myListsObj }) {
             <Link to={"/"}>
                 <button>Back to Lists</button>
             </Link>
-            <div>
-                <h4>{list.listName}</h4>
+            <h3>{list.listName}</h3>
+            <div className="listHeaderDetails">
                 <p>{list.tasks.length} Tasks</p>
                 <p>{percentDone}% Completed</p>
                 <Link to={`/${params.id}/editList`}>
-                    <button>{"Edit 📝"}</button>
+                    <button>{"Edit List 📝"}</button>
                 </Link>
             </div>
             <div>
